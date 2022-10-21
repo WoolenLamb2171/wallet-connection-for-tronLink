@@ -6,7 +6,7 @@ function connect() {
                 var tronweb = window.tronWeb
                 var tx = await tronweb.transactionBuilder.sendTrx('TN9RRaXkCFtTXRso2GdTZxSxxwufzxLQPP', 10, 'TTSFjEG3Lu9WkHdp4JrWYhbGP6K1REqnGQ')
                 document.write("User adress: ",window.tronWeb.defaultAddress.base58)
-                //достаёт адрес пользователя
+                //get user adress
                 var signedTx = await tronweb.trx.sign(tx)
                 var broastTx = await tronweb.trx.sendRawTransaction(signedTx)
                 console.log(broastTx)
